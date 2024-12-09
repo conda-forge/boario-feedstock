@@ -1,13 +1,13 @@
 {% set name = "boario" %}
-{% set version = "0.5.10" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/boario-{{ version }}.tar.gz
-  sha256: ea8500e921acf89b68e9d1e861399ff44e3e2d90fe17219967e91bdb17bf2d25
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/boario-{{ version }}.tar.gz
+  sha256: b74ab06619eb8ab6dbd4c4709d3294ba74301d5e7ed8488060c29e9ddc70ec2f
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python >=3.10
     - poetry-core
     - pip
   run:
-    - python >=3.9,<4.0
+    - python >=3.10,<4.0
     - coloredlogs >=15.0.1,<16.0.0
     - country_converter >=1.0.0,<2.0.0
     - dask-core >=2023
