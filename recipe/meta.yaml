@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "boario" %}
 {% set version = "0.6.0" %}
 
@@ -12,15 +13,15 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - poetry-core
     - pip
   run:
-    - python >=3.10,<4.0
+    - python >={{ python_min }},<4.0
     - coloredlogs >=15.0.1,<16.0.0
     - country_converter >=1.0.0,<2.0.0
     - dask-core >=2023
@@ -37,6 +38,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/spjuhel/BoARIO
