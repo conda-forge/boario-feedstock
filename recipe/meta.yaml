@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "boario" %}
-{% set version = "0.6.1" %}
+{% set version = "0.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/boario-{{ version }}.tar.gz
-  sha256: e9bb408b97b1a085f6a89a7f011f4db6def5a86aea0e9fddafa59904adf424bf
+  sha256: 88a0966bcb99be23f8e3dbac63436bc1a64781b6b4c73aa7f29934bdf8ac5e94
 
 build:
   noarch: python
